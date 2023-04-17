@@ -17,7 +17,6 @@ export default function AddTask( {tasks, setTasks} ) {
 
   return (
     <div>
-      <h1>Todo List</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="task" placeholder="Add task" />
         <button type="submit">Add</button>

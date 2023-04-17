@@ -36,6 +36,7 @@ export default function Todos() {
                 <title>Todos</title>
             </Head>
             <main>
+                <h1>Todo List</h1>
                 <TaskList {...{tasks}} {...{setTasks}}></TaskList>
                 <AddTask {...{tasks}} {...{setTasks}}></AddTask>
             </main>
