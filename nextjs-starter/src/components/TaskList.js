@@ -1,4 +1,4 @@
-import { deleteTask } from '@/modules/Data';
+import { deleteTask, updateTask } from '@/modules/Data';
 import React from 'react';
 import Task from './Task'
 import { useAuth } from '@clerk/nextjs';
@@ -10,6 +10,9 @@ export default function TaskList({tasks, setTasks}) {
     const newTasks = [...tasks];
     newTasks[index].done = !newTasks[index].done;
     setTasks(newTasks);
+    getToken({ template: "codehooks" }).then( (token) => {
+      updateTask(token, newTasks[index]);
+    });
   };
   
   const handleDelete = (index) => {

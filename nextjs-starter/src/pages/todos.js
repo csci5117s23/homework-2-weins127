@@ -20,7 +20,8 @@ export default function Todos() {
                 newTasks.push({
                     name: task.task,
                     done: task.done,
-                    _id: task._id 
+                    _id: task._id,
+                    createdOn: task.createdOn
                 });
             });
             setTasks(newTasks);
